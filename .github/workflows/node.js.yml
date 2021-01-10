@@ -1,7 +1,6 @@
 name: Node CI
 
 on: [push]
-
   build:
     runs-on: ubuntu-latest
     steps:
@@ -10,10 +9,11 @@ on: [push]
         run: |
           npm install
           npm run build
-      - uses: actions/upload-artifact@main
+      - uses: actions/upload-artifact@master
         with:
           name: webpack artifacts
           path: public/
+
 
   test:
 
